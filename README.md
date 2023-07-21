@@ -7,3 +7,12 @@ completa e robusta, o que justifica o fato de atualmente estar entre as [cinco l
 &nbsp;&nbsp;&nbsp; Sendo fortemente tipada e orientada a objetos, ela é extremamente versátil, podendo ser usada para diversos fins, 
 seja uma software empresarial ou até mesmo jogos. É uma linguagem mutiplataforma, podendo ser executada em diferentes sistemas operacionais, e tem sua sintaxe similar a de C++, também sofrendo fortes influencias de Java.
 
+
+## Critérios de avaliação da linguagem
+&nbsp;&nbsp;&nbsp; Os princípais cŕiteiros para a avliação de uma línguagem são:
+
+### Legibilidade
+&nbsp;&nbsp;&nbsp; Esse conceito diz respeito a clareza e facilidade da leitura e do entendimento de um código feito em determinada linguagem. C# em particular é tida como extremamente legível, pos tem seus 
+
+
+redigibilidade e confiabilidade
