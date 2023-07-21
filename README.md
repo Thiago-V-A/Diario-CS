@@ -11,8 +11,27 @@ seja uma software empresarial ou até mesmo jogos. É uma linguagem mutiplatafor
 ## Critérios de avaliação da linguagem
 &nbsp;&nbsp;&nbsp; Os princípais cŕiteiros para a avliação de uma línguagem são:
 
-### Legibilidade
-&nbsp;&nbsp;&nbsp; Esse conceito diz respeito a clareza e facilidade da leitura e do entendimento de um código feito em determinada linguagem. C# em particular é tida como extremamente legível, pos tem seus 
+  * **Legibilidade**  
+Esse conceito diz respeito a clareza e facilidade da leitura e do entendimento de um código feito em determinada linguagem. C# em particular é tida como extremamente legível. Tem uma sintaxe limpa e organizada, com o uso de de chaves para delimitar bloco de códigos e uma norma de identação difundidade que facilita a padronização.
 
 
-redigibilidade e confiabilidade
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+
+```
+Ness exemplo de código podemos observar o uso das boas práticas de identação em C#, respeitando espaços em brancos, uso adquados de espaçamentos e afins, dessa forma temos nosso "Hello World" de fácil entendimento.
+
+
+
+  * **Redigibilidade**
+
+
+  * **Confiabilidade**
