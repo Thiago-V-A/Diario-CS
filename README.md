@@ -71,7 +71,7 @@ class Cachorro : Animal
 
 &nbsp;&nbsp;&nbsp;  Ademais, como a maioria das linguagem de programação modernas, C# segue principalmente o paradigma imperativo, com atribuição de variáveis, iterações, controle de fluxo e etc. Assim sendo, podemos classificar C# como uma lingugagem multiparadigma, afinal, da suporte a diversas categorias de lingugagem.
 
-
-
+## Método de implementação
+ &nbsp;&nbsp;&nbsp; 
 
 
