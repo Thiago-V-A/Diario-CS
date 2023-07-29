@@ -47,5 +47,31 @@ class Program
 ```
 &nbsp;&nbsp;&nbsp; Nesse exemplo de código podemos observar o uso das boas práticas de identação em C#, respeitando espaços em brancos, uso adquados de espaçamentos e afins, dessa forma temos nosso "Hello World" de fácil entendimento. Também podemos ter uma noção de como é feita a divisão de um programa em C#.
 
-## Categoria de C#
+## Paradigma de C#
+&nbsp;&nbsp;&nbsp; Com seu suporte para classes, objetos, encapsulamentos e demais recursos de orientação a objetos, podemos dizer que se trata de uma linguagem OO. Entretanto, a linguagem também disponibiliza suporte a programação funcional, tendo recrusos como lambda, delegado e LINQ, tipicas do paradigma funcional. No código abaixo, podemos observar o uso de classes em C#, recurso do paradigma orientado a objetos.
+```csharp
+class Animal
+{
+    public void EmitirSom()
+    {
+        Console.WriteLine("Animal emitindo som...");
+    }
+}
+
+// Subclasse que herda da classe Animal
+class Cachorro : Animal
+{
+    public void Latir()
+    {
+        Console.WriteLine("Cachorro latindo...");
+    }
+}
+```
+
+
+&nbsp;&nbsp;&nbsp;  Ademais, como a maioria das linguagem de programação modernas, C# segue principalmente o paradigma imperativo, com atribuição de variáveis, iterações, controle de fluxo e etc. Assim sendo, podemos classificar C# como uma lingugagem multiparadigma, afinal, da suporte a diversas categorias de lingugagem.
+
+
+
+
 
