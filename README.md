@@ -115,11 +115,14 @@ Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Impr
  &nbsp;&nbsp;&nbsp; Tipos de dados são um conjunto de regras que ditam quais valores e operações serão realizadas com deterinada variável, um tipo int, por exemplo, diz que o dado ali é um número inteiro e que portanto poderá realizar todas as operações de um número inteiro, embora não possa, por exemplo, ser somado com um tipo string. Como já citamos anteriormente, C# é fortemente tipada, o que significa que você precisa declarar os tipos de variáveis, no geral terá que converter explicitamente e os tipos de dados são verificados em tempo de compilação. 
 
 
- &nbsp;&nbsp;&nbsp; Existem basicamente dois tipos de dados, os primitivos e os estruturais. Os primitivos são aqueles que dão origens aos estruturais, por exemplo, uma string, que é estrutural, é uma coleção de char, que por sua vez é um tipo primitivo.
-
+ &nbsp;&nbsp;&nbsp; Existem basicamente dois tipos de dados, os primitivos e os estruturais. Os primitivos são aqueles que dão origens aos estruturais, por exemplo, uma string, que é estrutural, é uma coleção de char, que por sua vez é um tipo primitivo. Abaixo temos uma tabela que lista os tipos primitivos de C# (também tidos como "Simple Types"), a partir deles temos diversos outros tipos.
 
 ![](src/tipos-primitivos-csharp.webp)
 
+
+&nbsp;&nbsp;&nbsp; C# também divide seus dados entre de valor e de referência, como já citamos no tópico anterior, que armazenam  respectivamente o próprio valor ou que armazenam uma referência ao valor. Os tipos de valor inclues, além dos primitivos que já citamos, enumerações, structs e nulos. Os tipos de referência são classes, interfaces e arrays. A seguir um esquema que ilustra essa divisão. 
+
+![](src/1_C4aoOI2OV12lOV53b-1bnw.png)
 
 
 
