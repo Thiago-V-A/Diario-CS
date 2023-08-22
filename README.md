@@ -91,7 +91,7 @@ class Cachorro : Animal
 int idade;
 string nome;
 ```
-  &nbsp;&nbsp;&nbsp; O escopo de variáveis em C# é defino por onde elas são declaradas. Por exemplo, uma variável declarada dentro de um método só é visível dentro desse método. Além dsso o valor de uma variável pode ser atribuido usando "=", embora também seja possível fazer essa atrubuição no momento da declaração:
+  &nbsp;&nbsp;&nbsp; O escopo de variáveis em C# é defino por onde elas são declaradas. Por exemplo, uma variável declarada dentro de um método só é visível dentro desse método, enquanto um atributo declarado dentro da classe apenas, pode ser usado por qualquer método. Além dsso o valor de uma variável pode ser atribuido usando "=", embora também seja possível fazer essa atrubuição no momento da declaração:
 
  ```csharp
 idade = 22;
@@ -100,9 +100,7 @@ DateTime dataNascimento = new DateTime(2000, 08, 26);
 ```
 
 
- &nbsp;&nbsp;&nbsp; Em C#, existem basicamente dois tipos de dados: de valor, que armazenam o próprio valor, e tipos de referência, que armazenam uma referência ao valor. Tipos de valor incluem int, float, enum, enquanto tipos de referência incluem classes, strings e arrays.
- &nbsp;&nbsp;&nbsp; Essa linguagem também nos permite o casting, que é a conversão de tipo de dados, é possível converter valores de um tipo para outro.
-
+ &nbsp;&nbsp;&nbsp; Em C#, existem basicamente dois tipos de dados: de valor, que armazenam o próprio valor, e tipos de referência, que armazenam uma referência ao valor. Tipos de valor incluem int, float, enum, enquanto tipos de referência incluem classes, strings e arrays. Essa linguagem também nos permite o casting, que é a conversão de tipo de dados, é possível converter valores de um tipo para outro.
  ```csharp
 double valorDouble = 10.5;
 int valorInteiro;
@@ -113,13 +111,11 @@ Console.WriteLine("Valor double: " + valorDouble); // Imprime o 10.5
 Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Imprime a parte inteira após o casting, ou seja, o 10
  ```
 
+## Tipos de dados
+ &nbsp;&nbsp;&nbsp; Tipos de dados são um conjunto de regras que ditam quais valores e operações serão realizadas com deterinada variável, um tipo int, por exemplo, diz que o dado ali é um número inteiro e que portanto poderá realizar todas as operações de um número inteiro, embora não possa, por exemplo, ser somado com um tipo string. Como já citamos anteriormente, C# é fortemente tipada, o que significa que você precisa declarar os tipos de variáveis, no geral terá que converter explicitamente e os tipos de dados são verificados em tempo de compilação. 
 
-Variáveis Nulas:
 
-C# também suporta variáveis nulas. Essas variáveis podem conter um valor ou não conter nenhum valor (null). Isso é útil para indicar que uma variável ainda não foi inicializada.
-Escopo de Classe (Variáveis de Classe):
-
-Variáveis declaradas em uma classe, mas fora de qualquer método, são chamadas de variáveis de classe ou variáveis de membro. Elas são acessíveis por todos os métodos dessa classe.
+ &nbsp;&nbsp;&nbsp; Existem basicamente dois tipos de dados, os primitivos e os estruturais. Os primitivos são aqueles que dão origens aos estruturais, por exemplo, uma string, que é estrutural, é uma coleção de char, que por sua vez é um tipo primitivo.
 
 
 
