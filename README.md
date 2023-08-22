@@ -120,12 +120,48 @@ Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Impr
 ![](src/tipos-primitivos-csharp.webp)
 
 
-&nbsp;&nbsp;&nbsp; C# também divide seus dados entre de valor e de referência, como já citamos no tópico anterior, que armazenam  respectivamente o próprio valor ou que armazenam uma referência ao valor. Os tipos de valor inclues, além dos primitivos que já citamos, enumerações, structs e nulos. Os tipos de referência são classes, interfaces e arrays. A seguir um esquema que ilustra essa divisão. 
+ &nbsp;&nbsp;&nbsp; C# também divide seus dados entre de valor e de referência, como já citamos no tópico anterior, que armazenam  respectivamente o próprio valor ou que armazenam uma referência ao valor. Os tipos de valor inclues, além dos primitivos que já citamos, enumerações, structs e nulos. Os tipos de referência são classes, interfaces e arrays. A seguir um esquema que ilustra essa divisão. 
 
 ![](src/1_C4aoOI2OV12lOV53b-1bnw.png)
 
 
+ &nbsp;&nbsp;&nbsp; Devemos mencionar também que embora C# permita operação com ponteiros, elas não são recomendadas e são mais restritas em relação as linguagens de mais baixo nível como C, além de marcar o uso de ponteiro como "não seguro".
 
+
+## Expreções e atribuição
+
+ &nbsp;&nbsp;&nbsp; Expreção aritméticas em C# incluem adição, subtração, multiplicação, divisão e etc. Para manipular tais expreções usamos os próprios operadores aritméticos. Embora a ordem de precedência seja parecida com a da matemática que vemos no dia dia, no caso de elemento de mesma prioridade o código é executado da esquerda para a direita. Também podemos usar parênteses para alterar essa ordem, fazendo com que, por exemplo, uma soma ocorra antes de uma multiplicação numa expressão. No exemplo de código abaixo, vêmos algumas operações e o uso de parênteses apra realizarmos uma soma antes de uma multiplicação.
+```csharp
+int x = 10;
+int y = 5;
+
+int soma = x + y;       // Adição
+int subtracao = x - y;  // Subtração
+int multiplicacao = x * y;  // Multiplicação
+int divisao = x / y;    // Divisão
+
+int resultado = (x + y) * (x - y);  // Expressão mais complexa
+```
+
+ &nbsp;&nbsp;&nbsp; Também podemos fazer uso de expreções condicionais para atribuir valores. Em C# também é possível fazer uso de uma expressão condicional ternária.
+ ```csharp
+int idade = 18;
+
+if (idade >= 18)
+{
+    Console.WriteLine("Você é maior de idade.");
+}
+else
+{
+    Console.WriteLine("Você é menor de idade.");
+}
+
+// Expressão condicional ternária
+string status = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+Console.WriteLine(status);
+
+```
+ 
 
 
 
