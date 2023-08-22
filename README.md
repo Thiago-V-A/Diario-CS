@@ -85,23 +85,9 @@ class Cachorro : Animal
 
 ## Variáveis
  &nbsp;&nbsp;&nbsp; Variáveis são uma parte fundamental de qualquer linguagem de programação, e não seria diferente em C#, onde temos alguns tipos de variáveis, como inteiros, ponto flutuanre, caracteres, booleado entre outros. Para usarmos variáveis em C# precisamos primeiro de declará-las, isso da ao compilador o nome e o tipo que será armazenado, veja a seguir um exemplo:
-```csharp
-class MinhaClasse
-{
-    float temperatura;
-    string nome;
-    MinhaClasse minhaClasse;
 
-    char primeiraLetra = 'A';
-    var limit = 3;
-    int[] source = { 0, 1, 2, 3, 4, 5 };
-    var query = from item in source
-                where item <= limit
-                select item;
-}
 
-```
- 
+
 
 
 
