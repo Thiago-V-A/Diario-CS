@@ -118,6 +118,8 @@ Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Impr
  &nbsp;&nbsp;&nbsp; Existem basicamente dois tipos de dados, os primitivos e os estruturais. Os primitivos são aqueles que dão origens aos estruturais, por exemplo, uma string, que é estrutural, é uma coleção de char, que por sua vez é um tipo primitivo.
 
 
+![](src/tipos-primitivos-csharp.webp)
+
 
 
 
