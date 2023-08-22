@@ -128,9 +128,9 @@ Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Impr
  &nbsp;&nbsp;&nbsp; Devemos mencionar também que embora C# permita operação com ponteiros, elas não são recomendadas e são mais restritas em relação as linguagens de mais baixo nível como C, além de marcar o uso de ponteiro como "não seguro".
 
 
-## Expreções e atribuição
+## Expressões e atribuição
 
- &nbsp;&nbsp;&nbsp; Expreção aritméticas em C# incluem adição, subtração, multiplicação, divisão e etc. Para manipular tais expreções usamos os próprios operadores aritméticos. Embora a ordem de precedência seja parecida com a da matemática que vemos no dia dia, no caso de elemento de mesma prioridade o código é executado da esquerda para a direita. Também podemos usar parênteses para alterar essa ordem, fazendo com que, por exemplo, uma soma ocorra antes de uma multiplicação numa expressão. No exemplo de código abaixo, vêmos algumas operações e o uso de parênteses apra realizarmos uma soma antes de uma multiplicação.
+ &nbsp;&nbsp;&nbsp; Expressões aritméticas em C# incluem adição, subtração, multiplicação, divisão e etc. Para manipular tais expressões usamos os próprios operadores aritméticos. Embora a ordem de precedência seja parecida com a da matemática que vemos no dia dia, no caso de elemento de mesma prioridade o código é executado da esquerda para a direita. Também podemos usar parênteses para alterar essa ordem, fazendo com que, por exemplo, uma soma ocorra antes de uma multiplicação numa expressão. No exemplo de código abaixo, vêmos algumas operações e o uso de parênteses apra realizarmos uma soma antes de uma multiplicação.
 ```csharp
 int x = 10;
 int y = 5;
@@ -143,7 +143,7 @@ int divisao = x / y;    // Divisão
 int resultado = (x + y) * (x - y);  // Expressão mais complexa
 ```
 
- &nbsp;&nbsp;&nbsp; Também podemos fazer uso de expreções condicionais para atribuir valores. Em C# também é possível fazer uso de uma expressão condicional ternária.
+ &nbsp;&nbsp;&nbsp; Também podemos fazer uso de expressões condicionais para atribuir valores. Em C# também é possível fazer uso de uma expressão condicional ternária.
  ```csharp
 int idade = 18;
 
@@ -159,9 +159,137 @@ else
 // Expressão condicional ternária
 string status = (idade >= 18) ? "Maior de idade" : "Menor de idade";
 Console.WriteLine(status);
-
 ```
- 
 
+## Estruturas de Controle
+ &nbsp;&nbsp;&nbsp; Em C#, as estruturas de controle são usadas para controlar o fluxo de execução do programa. Elas permitem que você tome decisões, execute repetições e execute diferentes blocos de código com base em condições específicas. A primeira estrutura que citarems é a condicional if - if else - else, a qual utilizamos para executar determinada tomada de decisão.
+ 
+ ```csharp
+int idade = 18;
+if (idade < 18)
+{
+    Console.WriteLine("Você é menor de idade.");
+}
+else if (idade == 18)
+{
+    Console.WriteLine("Você tem 18 anos.");
+}
+else
+{
+    Console.WriteLine("Você é maior de idade.");
+}
+```
+
+ &nbsp;&nbsp;&nbsp; Também contamos com seletores múltiplos usando a operação switch. 
+
+ 
+ ```csharp
+ char nota = 'B';
+
+switch (nota)
+{
+    case 'A':
+        Console.WriteLine("Excelente!");
+        break;
+    case 'B':
+        Console.WriteLine("Bom trabalho.");
+        break;
+    case 'C':
+        Console.WriteLine("Médio.");
+        break;
+    case 'D':
+        Console.WriteLine("Precisa melhorar.");
+        break;
+    case 'E':
+        Console.WriteLine("Insatisfatório.");
+        break;
+    default:
+        Console.WriteLine("Nota inválida.");
+        break;
+}
+```
+
+&nbsp;&nbsp;&nbsp; Ademais, C# também possui estruturas de loops, podendo essas serem controladas por contadores, logicamente, pelo usuário e sobre estruturas.
+
+ * **Por contadores**  
+
+Nesse caso, as iterações são feitas por um contadores, e a utilizamos quando temos um número específico de casos de repetições que já nos foi fornecido. Utilizando uma estrutura genêrica: for (count = 1; count < 10; count ++).
+
+ * **Logicamente**  
+
+São mais gerais que loops controlados por contadores, são controlados por uma expressão booleana, como por exemplo, **while(queue != null)** ou seja, enquanto houver um elemento na fila, o loop sera executado.
+
+ * **Pelo usuário**  
+
+Permite ao usuário gerir a saída do loop com uma condicional e um break, ou seja, o usuário influencia no fluxo de execução do loop.
+
+ * **Sobre estruturas**
+     
+  Refere-se à capacidade de percorrer (iterar) uma estrutura de dados, como um array ou uma coleção, para acessar e manipular seus elementos. O foreach é frequentemente usado para iterar sobre coleções em C#. Noexemplo abaixo o array é todo percorrido e impresso.
+```csharp
+int[] numeros = { 1, 2, 3, 4, 5 };
+foreach (int numero in numeros)
+{
+    Console.WriteLine(numero);
+}
+```
+
+## Subprogramas 
+
+  &nbsp;&nbsp;&nbsp; Subprogramas são blocos de código que realizam tarefas específicas e podem ser chamados de dentro de outros blocos de código. Eles são uma parte essencial da programação e da organização do código. Em C#, você pode criar subprogramas de duas maneiras principais: métodos e funções.  
+  
+  &nbsp;&nbsp;&nbsp; Nos métodos realizamos uma ação ou uma série de ações, eles podem ou não retornar um valor. Já as funções são semelhantes aos métodos, mas elas retornam um valor. Também temos os tipos de passagem de dados (ou parâmetos), que podem ser por valor ou referência, respectivamente, passando uma cópia do valor ou o endereço original da memória.
+
+  
+  &nbsp;&nbsp;&nbsp; Ainda em subprogramas, tempos os conceitos de variáveis locais e funções locais. Essas, como o nome sugere, são de escopo local, sendo declaradas dentro da função / método, e portanto só podem ser acessadas de dentro desses subprogramas em que foram declaradas. 
+
+```csharp
+ void MeuProcedimento()
+{
+    int x = 10; // Declaração de variável local, somente podendo ser acessada nesse método.
+
+    int FuncaoLocal() // Função local que só pode ser accessada de dentro dessa função.
+    {
+        return x * 2; // 
+    }
+
+    int resultado = FuncaoLocal();
+    Console.WriteLine(resultado);
+}
+```
+  &nbsp;&nbsp;&nbsp; Em C# podemos usar os modificadores in, out e ref para passar parâmetros para métodos ou funções com diferentes comportamentos.  
+ **In:** O parâmetro é passado como somente leitura.  
+ **Out:** O parâmetro é passado como somente escrita.  
+ **Ref:** O parâmetro é passado como leitura e escrita.  
+ 
+```csharp
+void RetornaMaisDeUmValor(in x, out int a, out int b)
+{
+    //x = 2; resultaria em erro, pois é somente leitura.
+    a = 5;
+    b = 10;
+}
+```
+
+  &nbsp;&nbsp;&nbsp; Em C# você também pode passar métodos ou funções como parâmetros para outros métodos. Isso é comumente usado em cenários de programação funcional e é conhecido como delegates ou expressões lambda.
+
+## Tratamento de exceção
+ &nbsp;&nbsp;&nbsp; C# também permite tratamento de exceção, que é uma ferramente usada por programadores para capturar e lidar com erros que possam vir a acontecer durante a execução do programa. Para tanto, é usado um bloco try, onde colocamos nosso programa que pode vir a gerar uma exceção, então os blocos catch que tratam exceções definias, finalmente temos um bloco finally que contém um código que será executado independentemente de uma exceção ser ou não lançada.
+
+
+```csharp
+try
+{
+    // Código que possa gerar exceções vai aqui.
+}
+catch (Alguma erro que pode ser gerado)
+{
+    // Código para lidar com a exceção vai aqui.
+}
+finally
+{
+    // Código para ser executado depois dos blocos de try (e possivelmente cathc) vai aqui
+}
+```
 
 
