@@ -88,12 +88,38 @@ class Cachorro : Animal
 
 
 ```csharp
-float temperatura;
+int idade;
 string nome;
-MinhaClasse minhaClasse;
 ```
-O escopo de variáveis em C# é defino por onde elas são declaradas. Por exemplo, uma variável declarada dentro de um método só é visível dentro desse método.
+  &nbsp;&nbsp;&nbsp; O escopo de variáveis em C# é defino por onde elas são declaradas. Por exemplo, uma variável declarada dentro de um método só é visível dentro desse método. Além dsso o valor de uma variável pode ser atribuido usando "=", embora também seja possível fazer essa atrubuição no momento da declaração:
 
+ ```csharp
+idade = 22;
+nome = "Thiago";
+DateTime dataNascimento = new DateTime(2000, 08, 26);
+```
+
+
+ &nbsp;&nbsp;&nbsp; Em C#, existem basicamente dois tipos de dados: de valor, que armazenam o próprio valor, e tipos de referência, que armazenam uma referência ao valor. Tipos de valor incluem int, float, enum, enquanto tipos de referência incluem classes, strings e arrays.
+ &nbsp;&nbsp;&nbsp; Essa linguagem também nos permite o casting, que é a conversão de tipo de dados, é possível converter valores de um tipo para outro.
+
+ ```csharp
+double valorDouble = 10.5;
+int valorInteiro;
+
+valorInteiro = (int)valorDouble; // Realizando o casting.
+
+Console.WriteLine("Valor double: " + valorDouble); // Imprime o 10.5
+Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Imprime a parte inteira após o casting, ou seja, o 10
+ ```
+
+
+Variáveis Nulas:
+
+C# também suporta variáveis nulas. Essas variáveis podem conter um valor ou não conter nenhum valor (null). Isso é útil para indicar que uma variável ainda não foi inicializada.
+Escopo de Classe (Variáveis de Classe):
+
+Variáveis declaradas em uma classe, mas fora de qualquer método, são chamadas de variáveis de classe ou variáveis de membro. Elas são acessíveis por todos os métodos dessa classe.
 
 
 
