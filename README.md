@@ -293,3 +293,10 @@ finally
 ```
 
 
+ &nbsp;&nbsp;&nbsp; Algumas exceções são geradas automaticamente pelo runtime do .NET quando operações básicas falham. Essas exceções e suas condições de erro são listadas na tabela a seguir.  
+ 
+![](src/Screenshot_2.png)  
+
+
+  &nbsp;&nbsp;&nbsp; As exceções a seguir são geradas por determinadas operações do C#.   
+![](src/Screenshot_3.png)
