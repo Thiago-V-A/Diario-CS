@@ -2,7 +2,16 @@
 ![](src/Desktop-1.png)  
 
 ## Índice
-[1 - Sobre a linguagem](#secao1).   
+[1 - Sobre a linguagem](#secao1).  
+[2 - Critérios de avaliação da linguagem](#secao2).  
+[3 - Paradigma de C#](#secao3).  
+[4 - Método de implementação](#secao4).  
+[5 - Variáveis](#secao5).  
+[6 - Tipos de dados](#secao6).  
+[7 - Expressões e atribuição](#secao7).  
+[8 -  Estruturas de Controle](#secao8).  
+[9 - Subprogramas](#secao9).  
+[10 - Tratamento de exceção](#secao10).    
 
 
 
@@ -17,7 +26,7 @@ seja uma software empresarial ou até mesmo jogos. É uma linguagem mutiplatafor
 
 
 
-## Critérios de avaliação da linguagem
+## Critérios de avaliação da linguagem <a name="secao2"></a>
 &nbsp;&nbsp;&nbsp; Os princípais cŕiteiros para a avliação de uma línguagem são:
 
   * **Legibilidade**  
@@ -56,7 +65,7 @@ class Program
 ```
 &nbsp;&nbsp;&nbsp; Nesse exemplo de código podemos observar o uso das boas práticas de identação em C#, respeitando espaços em brancos, uso adquados de espaçamentos e afins, dessa forma temos nosso "Hello World" de fácil entendimento. Também podemos ter uma noção de como é feita a divisão de um programa em C#.
 
-## Paradigma de C#
+## Paradigma de C# <a name="secao3"></a>
 &nbsp;&nbsp;&nbsp; Com seu suporte para classes, objetos, encapsulamentos e demais recursos de orientação a objetos, podemos dizer que se trata de uma linguagem OO. Entretanto, a linguagem também disponibiliza suporte a programação funcional, tendo recrusos como lambda, delegado e LINQ, tipicas do paradigma funcional. No código abaixo, podemos observar o uso de classes em C#, recurso do paradigma orientado a objetos.
 ```csharp
 class Animal
@@ -80,7 +89,7 @@ class Cachorro : Animal
 
 &nbsp;&nbsp;&nbsp;  Ademais, como a maioria das linguagem de programação modernas, C# segue principalmente o paradigma imperativo, com atribuição de variáveis, iterações, controle de fluxo e etc. Assim sendo, podemos classificar C# como uma lingugagem multiparadigma, afinal, da suporte a diversas categorias de lingugagem.
 
-## Método de implementação
+## Método de implementação <a name="secao4"></a>
  &nbsp;&nbsp;&nbsp; C# é uma linguagem de programação que opera no ambiente .NET, composto pelo Common Language Runtime (CLR). O CLR, uma implementação da Common Language Infrastructure (CLI), fornece um ambiente de execução para programas .NET. O código-fonte C# é compilado em uma Linguagem Intermediária IL compatível com a CLI, o que permite a portabilidade do código para diferentes plataformas. Essa IL é armazenada em assemblys, que contêm informações sobre tipos, versões e culturas em um manifesto.
 
 &nbsp;&nbsp;&nbsp; Quando um programa C# é executado, o assembly correspondente é carregado no CLR, que realiza a compilação JIT (Just-In-Time), convertendo a linguágem intermediária em instruções nativas da máquina durante a execução. O CLR também oferece serviços como coleta automática de lixo, tratamento de exceções e gerenciamento de recursos. O código que é executado pelo CLR é chamado de "código gerenciado", enquanto o "código não gerenciado" é compilado para uma plataforma específica. Essa arquitetura flexível e eficaz torna C# uma linguagem poderosa para desenvolvimento de software em várias plataformas.
@@ -92,7 +101,7 @@ class Cachorro : Animal
 &nbsp;&nbsp;&nbsp; No esquema acima podemos observar como o código é inicialmente compilado numa linguagem intermediária, guardado em assemblys e então executo com execução JIT.
 
 
-## Variáveis
+## Variáveis <a name="secao5"></a>
  &nbsp;&nbsp;&nbsp; Variáveis são uma parte fundamental de qualquer linguagem de programação, e não seria diferente em C#, onde temos alguns tipos de variáveis, como inteiros, ponto flutuanre, caracteres, booleado entre outros. Para usarmos variáveis em C# precisamos primeiro de declará-las, isso da ao compilador o nome e o tipo que será armazenado, veja a seguir um exemplo:
 
 
@@ -120,7 +129,7 @@ Console.WriteLine("Valor double: " + valorDouble); // Imprime o 10.5
 Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Imprime a parte inteira após o casting, ou seja, o 10
  ```
 
-## Tipos de dados
+## Tipos de dados <a name="secao6"></a>
  &nbsp;&nbsp;&nbsp; Tipos de dados são um conjunto de regras que ditam quais valores e operações serão realizadas com deterinada variável, um tipo int, por exemplo, diz que o dado ali é um número inteiro e que portanto poderá realizar todas as operações de um número inteiro, embora não possa, por exemplo, ser somado com um tipo string. Como já citamos anteriormente, C# é fortemente tipada, o que significa que você precisa declarar os tipos de variáveis, no geral terá que converter explicitamente e os tipos de dados são verificados em tempo de compilação. 
 
 
@@ -137,7 +146,7 @@ Console.WriteLine("Valor inteiro (depois do casting): " + valorInteiro); // Impr
  &nbsp;&nbsp;&nbsp; Devemos mencionar também que embora C# permita operação com ponteiros, elas não são recomendadas e são mais restritas em relação as linguagens de mais baixo nível como C, além de marcar o uso de ponteiro como "não seguro".
 
 
-## Expressões e atribuição
+## Expressões e atribuição <a name="secao7"></a>
 
  &nbsp;&nbsp;&nbsp; Expressões aritméticas em C# incluem adição, subtração, multiplicação, divisão e etc. Para manipular tais expressões usamos os próprios operadores aritméticos. Embora a ordem de precedência seja parecida com a da matemática que vemos no dia dia, no caso de elemento de mesma prioridade o código é executado da esquerda para a direita. Também podemos usar parênteses para alterar essa ordem, fazendo com que, por exemplo, uma soma ocorra antes de uma multiplicação numa expressão. No exemplo de código abaixo, vêmos algumas operações e o uso de parênteses apra realizarmos uma soma antes de uma multiplicação.
 ```csharp
@@ -170,7 +179,7 @@ string status = (idade >= 18) ? "Maior de idade" : "Menor de idade";
 Console.WriteLine(status);
 ```
 
-## Estruturas de Controle
+## Estruturas de Controle <a name="secao8"></a>
  &nbsp;&nbsp;&nbsp; Em C#, as estruturas de controle são usadas para controlar o fluxo de execução do programa. Elas permitem que você tome decisões, execute repetições e execute diferentes blocos de código com base em condições específicas. A primeira estrutura que citarems é a condicional if - if else - else, a qual utilizamos para executar determinada tomada de decisão.
  
  ```csharp
@@ -243,7 +252,7 @@ foreach (int numero in numeros)
 }
 ```
 
-## Subprogramas 
+## Subprogramas <a name="secao9"></a>  
 
   &nbsp;&nbsp;&nbsp; Subprogramas são blocos de código que realizam tarefas específicas e podem ser chamados de dentro de outros blocos de código. Eles são uma parte essencial da programação e da organização do código. Em C#, você pode criar subprogramas de duas maneiras principais: métodos e funções.  
   
@@ -282,7 +291,7 @@ void RetornaMaisDeUmValor(in x, out int a, out int b)
 
   &nbsp;&nbsp;&nbsp; Em C# você também pode passar métodos ou funções como parâmetros para outros métodos. Isso é comumente usado em cenários de programação funcional e é conhecido como delegates ou expressões lambda.
 
-## Tratamento de exceção
+## Tratamento de exceção <a name="secao10"></a>
  &nbsp;&nbsp;&nbsp; C# também permite tratamento de exceção, que é uma ferramente usada por programadores para capturar e lidar com erros que possam vir a acontecer durante a execução do programa. Para tanto, é usado um bloco try, onde colocamos nosso programa que pode vir a gerar uma exceção, então os blocos catch que tratam exceções definias, finalmente temos um bloco finally que contém um código que será executado independentemente de uma exceção ser ou não lançada.
 
 
