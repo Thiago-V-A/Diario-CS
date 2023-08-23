@@ -2,12 +2,12 @@
 ![](src/Desktop-1.png)  
 
 ## Índice
-[1 - Sobre a linguagem](https://github.com/Thiago-V-A/Diario-CS/tree/main#sobre-a-linguagem).   
+[1 - Sobre a linguagem](#secao1).   
 
 
 
 
-## Sobre a linguagem
+## Sobre a linguagem <a name="secao1"></a>  
 &nbsp;&nbsp;&nbsp;A linguagem de programação C# (leia-se C sharp) foi lançada em 2000 como parte da .NET, uma plataforma de desenvolvimento da Microsoft que fornece uma ampla estrutura para criação e execução de aplicativos. C# é tida como simples, porém extremamente
 completa e robusta, o que justifica o fato de atualmente estar entre as [cinco linguagens de programação mais populares](https://www.tiobe.com/tiobe-index/). 
 
